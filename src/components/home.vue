@@ -12,7 +12,6 @@
           </h1>
           <p class="disc" key="disc">{{imageInfo.disc}}</p>
         </div> -->
-        
         <form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s">
           <table>
              <tr>
@@ -411,9 +410,13 @@ export default {
         .home_content
           padding: 0 80px 50px 80px
           position:relative  
+  	.serachArea
+				position:absolute
+				top:0
+				height:50px
+				padding:7px 0
+				width:100%
+				left:0
+				box-sizing:border-box   	
 </style>
-<style>
-          #bdfm{
-            width:500px
-          }   
-</style>
+
