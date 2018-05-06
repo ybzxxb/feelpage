@@ -12,7 +12,7 @@
           </h1>
           <p class="disc" key="disc">{{imageInfo.disc}}</p>
         </div> -->
-        <form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s">
+        <!-- <form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s">
           <table>
              <tr>
                   <td>
@@ -24,7 +24,20 @@
                   <td><br/><input type="submit" value="搜索" /></td>
                </tr>
           </table>
-      </form>
+      </form> -->
+      <div class="resources_content">
+        <div class="serachArea">
+          <div class="selectContent">
+            <input class="searchInfo" type="text" placeholder="搜索你想搜的资源" v-model="searchKey" @keyup.enter="getResource()"><button @click="getResource()">搜索</button>
+            <select class="serachType" name="serachType" v-model="selected" @change="initType()">
+              <option v-for="opt in options" :value="opt.value">{{opt.text}}</option>
+            </select>
+          </div>
+        </div>
+        <transition name="silde-top">
+          <router-view class="list_resources" ref="resourceslist" name="downloadlist" :keyword="searchKey" :selectedvalue="selected" :serchoptions="options"></router-view>
+        </transition>
+        </div>
         <tips v-if="globalInfo.isHigher768"></tips>
         <div class="home_set">
           <div class="set_list" v-if="imageInfo.type === 'home'" :class="index === 4 ? 'disabled' : ''" title="上一张壁纸" @click="defaultData(2)">
@@ -409,14 +422,92 @@ export default {
       @media screen and (min-width: 992px)
         .home_content
           padding: 0 80px 50px 80px
-          position:relative  
-  	.serachArea
-				position:absolute
-				top:0
-				height:50px
-				padding:7px 0
-				width:100%
-				left:0
-				box-sizing:border-box   	
+          position:relative         
+  .resources_content
+    position:fixed
+    top:50px
+    bottom:0
+    left:50%
+    max-width:1240px
+    width:100%
+    transform:translate3d(-50%,0,0)
+    margin:0 auto
+    overflow-y:auto
+    box-sizing:border-box
+    -webkit-overflow-scrolling: touch
+    padding:15px
+    box-sizing:border-box
+    opacity:1
+    transition: all 0.5s 0.3s
+  .serachArea
+    position:absolute
+    top:0
+    height:50px
+    padding:7px 0
+    width:100%
+    left:0
+    box-sizing:border-box
+    .selectContent
+      width: 70%
+      min-width: 300px
+      max-width:500px
+      margin: 0 auto
+      height:36px
+      font-size:0
+      color:$text_color
+      position:relative  
+    .searchInfo
+      display:inline-block
+      vertical-align:top
+      height:36px
+      width: calc(100% - 70px)
+      font-size:14px
+      padding:0
+      text-indent:5px
+      color:$text_color
+      background:rgba(0,0,0,0.1)
+      border-radius:4px 0 0 4px
+      border:1px solid $text_color
+      border-right:0 none
+      outline:0 none
+      margin:0
+      box-sizing:border-box
+    .serachType
+      position:absolute
+      top: 5px
+      bottom: 5px
+      right: 74px
+      width:80px
+      background:rgba(0,0,0,0.1)
+      outline: none
+      color: $text_color
+      padding: 0 2px  
+      option
+        background:rgba(0,0,0,0.6)
+    button
+      display:inline-block
+      vertical-align:top
+      height:36px
+      width: 66px
+      font-size:14px
+      color:$text_color
+      border-radius:0 4px 4px 0
+      border:1px solid $text_color
+      background:rgba(0,0,0,0.1)
+      padding:0
+      outline:0 none
+      margin:0
+      cursor:pointer
+      &:hover
+        background:rgba(0,0,0,0.3)    
+  .list_resources
+    position:absolute
+    top: 80px
+    bottom:0
+    left:0
+    right:0
+    width:100%
+    box-sizing:border-box
+    padding:15px      
 </style>
 
