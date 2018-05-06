@@ -12,27 +12,14 @@
           </h1>
           <p class="disc" key="disc">{{imageInfo.disc}}</p>
         </div> -->
-        <!-- <form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s">
-          <table>
-             <tr>
-                  <td>
-                       <a href="http://www.baidu.com">
-                               <img src="../assets/baidu.png"/>
-                       </a>
-                  </td>
-                  <td><br/><input type="text" id="search1" name="word"/></td>
-                  <td><br/><input type="submit" value="搜索" /></td>
-               </tr>
-          </table>
-      </form> -->
+        
       <div class="resources_content">
         <div class="serachArea">
+          <form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s">
           <div class="selectContent">
-            <input class="searchInfo" type="text" placeholder="搜索" v-model="searchKey" @keyup.enter="getResource()"><button @click="getResource()">搜索</button>
-            <select class="serachType" name="serachType" v-model="selected" @change="initType()">
-              <option v-for="opt in options" :value="opt.value">{{opt.text}}</option>
-            </select>
+            <input class="searchInfo" type="text" placeholder="百度一下 你就知道" v-model="searchKey"><button @click="getResource()">search</button>
           </div>
+          </form>
         </div>
         <transition name="silde-top">
           <router-view class="list_resources" ref="resourceslist" name="downloadlist" :keyword="searchKey" :selectedvalue="selected" :serchoptions="options"></router-view>
