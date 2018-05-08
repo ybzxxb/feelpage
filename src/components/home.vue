@@ -15,7 +15,7 @@
           <router-view class="list_resources" ref="resourceslist" name="downloadlist" :keyword="searchKey" :selectedvalue="selected" :serchoptions="options"></router-view>
         </transition> -->
         <div class="page-container">
-                        <div class="container">
+                        <div class="container-fluid">
                                 <div class="row">
 
                                         <!-- start of page content -->
@@ -23,44 +23,40 @@
 
                                                 <!-- Basic Home Page Template -->
                                                 <div class="row separator">
-                                                        <section class="span4 articles-list">
+                                                        <section class="col-sm-12 articles-list">
                                                                 <h3>Featured Articles</h3>
                                                                 <ul class="articles">
-                                                                        <li class="article-entry standard">
-                                                                                <h4><a href="single.html">Integrating WordPress with Your Website</a></h4>
-                                                                                <span class="article-meta">25 Feb, 2013 in <a href="#" title="View all posts in Server &amp; Database">Server &amp; Database</a></span>
-                                                                                <span class="like-count">66</span>
-                                                                        </li>
-                                                                        <li class="article-entry standard">
+                                                                        <a class="article-entry  col-sm-4">
+                                                                              <img src="../assets/1_9.png" alt="">
+                                                                        </a>
+                                                                        <li class="article-entry standard col-sm-4">
                                                                                 <h4><a href="single.html">WordPress Site Maintenance</a></h4>
                                                                                 <span class="article-meta">24 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
                                                                                 <span class="like-count">15</span>
                                                                         </li>
-                                                                        <li class="article-entry video">
+                                                                        <li class="article-entry video col-sm-4">
                                                                                 <h4><a href="single.html">Meta Tags in WordPress</a></h4>
                                                                                 <span class="article-meta">23 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
                                                                                 <span class="like-count">8</span>
                                                                         </li>
-                                                                        <li class="article-entry image">
+                                                                        <li class="article-entry image col-sm-4">
                                                                                 <h4><a href="single.html">WordPress in Your Language</a></h4>
                                                                                 <span class="article-meta">22 Feb, 2013 in <a href="#" title="View all posts in Advanced Techniques">Advanced Techniques</a></span>
                                                                                 <span class="like-count">6</span>
                                                                         </li>
-                                                                        <li class="article-entry standard">
+                                                                        <li class="article-entry standard col-sm-4">
                                                                                 <h4><a href="single.html">Know Your Sources</a></h4>
                                                                                 <span class="article-meta">22 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
                                                                                 <span class="like-count">2</span>
                                                                         </li>
-                                                                        <li class="article-entry standard">
+                                                                        <li class="article-entry standard col-sm-4">
                                                                                 <h4><a href="single.html">Validating a Website</a></h4>
                                                                                 <span class="article-meta">21 Feb, 2013 in <a href="#" title="View all posts in Website Dev">Website Dev</a></span>
                                                                                 <span class="like-count">3</span>
                                                                         </li>
                                                                 </ul>
                                                         </section>
-
-
-                                                        <section class="span4 articles-list">
+                                                        <section class="col-sm-12 articles-list">
                                                                 <h3>Latest Articles</h3>
                                                                 <ul class="articles">
                                                                         <li class="article-entry standard">
@@ -105,8 +101,8 @@
 
                                                 <section class="widget">
                                                         <div class="support-widget">
-                                                                <h3 class="title">Support</h3>
-                                                                <p class="intro">Need more support? If you did not found an answer, contact us for further help.</p>
+                                                                <h3 class="title">校园动态</h3>
+                                                                <p class="intro">美化图片不再那么麻烦, 图片圆角效果, 加个阴影, 只要几行代了ghfgh 只要几行[图片]</p>
                                                         </div>
                                                 </section>
 
@@ -613,7 +609,6 @@ export default {
   top: 50px;
   bottom: 0;
   left: 50%;
-  max-width: 1240px;
   width: 100%;
   transform: translate3d(-50%, 0, 0);
   margin: 0 auto;

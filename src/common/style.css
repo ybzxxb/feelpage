@@ -263,9 +263,10 @@ form.search-form input.search-btn:hover {
   opacity: 0.9
 }
 
-.page-container>.container {
+.page-container>.container-fluid {
   padding: 40px 35px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7)
+
 }
 
 .breadcrumb {
@@ -601,12 +602,12 @@ ul.articles .article-entry {
   position: relative;
   border-bottom: 1px solid #f2f2f2;
   padding: 0 0 0 24px;
-  background: url("../assets/images/standard.png") no-repeat 0 3px;
+  /* background: url("../assets/images/standard.png") no-repeat 0 3px; */
 }
 
-ul.articles .article-entry.standard {
+/* ul.articles .article-entry.standard {
   background: url("../assets/images/standard.png") no-repeat 0 3px;
-}
+} */
 
 ul.articles .article-entry.video {
   background: url("../assets/images/video.png") no-repeat 0 3px;
