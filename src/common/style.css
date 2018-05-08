@@ -260,12 +260,12 @@ form.search-form input.search-btn:hover {
 .page-container {
   width: 100%;
   margin-top: 100px;
-  opacity: 0.9
+  /* opacity: 0.9 */
 }
 
 .page-container>.container-fluid {
   padding: 40px 35px;
-  background-color: rgba(0, 0, 0, 0.7)
+  background-color: rgba(0, 0, 0, 0.6)
 
 }
 
