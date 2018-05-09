@@ -1,6 +1,9 @@
 <template>
   <div id="app" @resize="isApp">
     <loader :isshow="getShowLoading" loaderbackground="rgba(0,0,0,0.3)"></loader>
+    <!-- <div class="maincontent">
+      <fixed-bg v-if="imageInfo.url && imageSetting" :imagepath="imageInfo.url" :maskcolor="getGlobalStyle.contentInfo.bgcolor" :maskopacity="getGlobalStyle.contentInfo.opacity" :masktype="getGlobalStyle.contentInfo.type" :maskglobainfo="getGlobalStyle" ></fixed-bg>
+    </div> -->
     <div class="maincontent">
       <fixed-bg v-if="imageInfo.url && imageSetting" :imagepath="imageInfo.url" :maskcolor="getGlobalStyle.contentInfo.bgcolor" :maskopacity="getGlobalStyle.contentInfo.opacity" :masktype="getGlobalStyle.contentInfo.type" :maskglobainfo="getGlobalStyle" ></fixed-bg>
     </div>
@@ -43,7 +46,7 @@ export default {
       // 是否需要获取壁纸信息
       const isShowBingImage = store.getters.getGlobalInfo.showBingImage
       // api地址
-      let api = isShowBingImage ? 'json/bg.json' : 'assets/background_85.jpg'
+      let api = isShowBingImage ? 'json/bg.json' : '/assets/background_85.jpg'
       // 判断本地是否有背景设置的数据信息
       const hasFixedImageBg = localStorage.getItem('fixedImageBg')
       // bing 的每日一图
@@ -215,7 +218,7 @@ export default {
   },
   mounted () {
     // 输出信息
-    DGlobal.utils.setConsole('基于vue2.0的网站新版更新', 1, '未曾遗忘的青春')
+    DGlobal.utils.setConsole('feelpage')
     // 设置audio 的refs
     this.setAudioRef()
     // this.$nextTick(() => {
