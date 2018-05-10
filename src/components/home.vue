@@ -180,7 +180,8 @@ export default {
       isShowAllList: false,
       myData: [],
       keyword: '',
-      now: -1
+      now: -1,
+      itemList:[],
     }
   },
   computed: {
@@ -203,6 +204,9 @@ export default {
   // components: {
   //   advertisement
   // },
+  mounted:function(){
+    this.getData();
+  },
   methods: {
     toggleFullScreen() {
       if (this.isFullScreen) {
@@ -240,6 +244,13 @@ export default {
       window.open('https://www.baidu.com/s?wd=' + this.keyword)
     },
 
+    //内容部分获取本地数据
+
+    getData:function(){
+      this.$http.get("../json/bg.json").then(function(res){
+        console.log(res)
+      })
+    },
     hideAllList() {
       this.isShowAllList = false
     },
@@ -465,7 +476,9 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-
+  background-image:url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center center;
   .pic_bg {
     position: absolute;
     top: 0;

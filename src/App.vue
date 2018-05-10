@@ -1,9 +1,9 @@
 <template>
   <div id="app" @resize="isApp">
     <loader :isshow="getShowLoading" loaderbackground="rgba(0,0,0,0.3)"></loader>
-    <div class="maincontent">
+    <!-- <div class="maincontent">
       <fixed-bg v-if="imageInfo.url && imageSetting" :imagepath="imageInfo.url" :maskcolor="getGlobalStyle.contentInfo.bgcolor" :maskopacity="getGlobalStyle.contentInfo.opacity" :masktype="getGlobalStyle.contentInfo.type" :maskglobainfo="getGlobalStyle" ></fixed-bg>
-    </div>
+    </div> -->
     <v-content></v-content>
     <updatetips :defaultvalue="getVersionList"></updatetips>
     <audio :src="getCurrentMusic.url" ref="myAudio"></audio>

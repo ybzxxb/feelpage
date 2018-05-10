@@ -265,7 +265,7 @@ form.search-form input.search-btn:hover {
 
 .page-container>.container-fluid {
   padding: 40px 35px;
-  background-color: rgba(0, 0, 0, 0.6)
+  /* background-color: rgba(0, 0, 0, 0.6) */
 
 }
 
@@ -600,7 +600,6 @@ ul.articles {
 
 ul.articles .article-entry {
   position: relative;
-  border-bottom: 1px solid #f2f2f2;
   padding: 0 0 0 24px;
   /* background: url("../assets/images/standard.png") no-repeat 0 3px; */
 }
