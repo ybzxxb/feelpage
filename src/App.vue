@@ -46,7 +46,7 @@ export default {
       // 是否需要获取壁纸信息
       const isShowBingImage = store.getters.getGlobalInfo.showBingImage
       // api地址
-      let api = isShowBingImage ? 'json/bg.json' : '/assets/background_85.jpg'
+      let api = isShowBingImage ? 'json/bg.json' : ''
       // 判断本地是否有背景设置的数据信息
       const hasFixedImageBg = localStorage.getItem('fixedImageBg')
       // bing 的每日一图
@@ -260,4 +260,6 @@ export default {
     bottom: 0
     right:0
     background:transparent
+  .bgimage
+    background:url('../static/18627925998890855.jpg')
 </style>
