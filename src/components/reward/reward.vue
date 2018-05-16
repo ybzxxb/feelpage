@@ -43,7 +43,7 @@ export default {
 		}
 	},
 	computed: {
-	},
+	},	
 	methods: {
 		back () {
 			this.$router.go(-1)

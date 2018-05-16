@@ -2,12 +2,9 @@
   <div id="app" @resize="isApp">
     <loader :isshow="getShowLoading" loaderbackground="rgba(0,0,0,0.3)"></loader>
     <!-- <div class="maincontent">
-<<<<<<< HEAD
-=======
       <fixed-bg v-if="imageInfo.url && imageSetting" :imagepath="imageInfo.url" :maskcolor="getGlobalStyle.contentInfo.bgcolor" :maskopacity="getGlobalStyle.contentInfo.opacity" :masktype="getGlobalStyle.contentInfo.type" :maskglobainfo="getGlobalStyle" ></fixed-bg>
     </div> -->
     <div class="maincontent">
->>>>>>> e44eccd65b2ed951897b8278229ac91ffc59b707
       <fixed-bg v-if="imageInfo.url && imageSetting" :imagepath="imageInfo.url" :maskcolor="getGlobalStyle.contentInfo.bgcolor" :maskopacity="getGlobalStyle.contentInfo.opacity" :masktype="getGlobalStyle.contentInfo.type" :maskglobainfo="getGlobalStyle" ></fixed-bg>
     </div> -->
     <v-content></v-content>
@@ -24,7 +21,7 @@ import fixedbg from 'components/common/fixedbg/fixedbg.vue'
 import content from 'components/common/content/content.vue'
 import pic from 'components/pic/pic.vue'
 import loader from 'components/common/loader/loader.vue'
-import updatetips from 'components/common/updatetips/updatetips.vue'
+// import updatetips from 'components/common/updatetips/updatetips.vue'
 import DGlobal from 'common/js/global.js'
 // 引入背景请求的api
 import {getBingInfo, getMineBgByIndex} from 'common/api/background.js'
@@ -42,7 +39,7 @@ export default {
     'fixed-bg': fixedbg,
     pic,
     loader,
-    updatetips
+    // updatetips
   },
   methods: {
     fetchData () {

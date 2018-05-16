@@ -668,7 +668,7 @@ export default {
     border: 1px solid $text_color;
     border-right: 0 none;
     outline: 0 none;
-    margin: 0;
+    margin-top:20px;
     box-sizing: border-box;
   }
   .bdsearch{
@@ -706,7 +706,7 @@ export default {
     background: rgba(0, 0, 0, 0.1);
     padding: 0;
     outline: 0 none;
-    margin: 0;
+    margin-top:20px;
     cursor: pointer;
 
     &:hover {

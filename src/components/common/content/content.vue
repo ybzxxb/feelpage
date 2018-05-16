@@ -145,7 +145,8 @@ export default {
 @import '../../../common/stylus/border-1px/index.styl'
 @import '../../../common/stylus/global.styl'
   .div_content
-    position:fixed
+    // position:fixed
+    position:absolute
     top:0
     left:0
     right:0
@@ -162,6 +163,8 @@ export default {
       margin:0
       font-size:0
       padding:0 20px
+      color:#fff
+      background-color:rgba(0,0,0,0.6)
       .left-menu
         a
           list-style:none
